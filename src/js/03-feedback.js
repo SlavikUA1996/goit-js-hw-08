@@ -13,7 +13,7 @@ function onFormInput(e) {
     // formData[e.target.name] = e.target.value;
     const formData = {
         email: form.elements.email.value,
-        message:form.elements.message.value,
+        message: form.elements.message.value,
     }
 localStorage.setItem('FEEDBACK_KEY', JSON.stringify(formData))
 }
