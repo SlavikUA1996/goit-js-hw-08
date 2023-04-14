@@ -6,7 +6,7 @@ const form = document.querySelector('.feedback-form');
 form.addEventListener('input', throttle(onFormInput, 500));
 form.addEventListener('submit', formSubmit);
 
-const FEEDBACK_KEY = 'feedback-form-state';
+const FEEDBACK_KEY = "feedback-form-state";
 // const formData = {};
 
 function onFormInput(e) {
@@ -33,13 +33,13 @@ localStorage.removeItem('FEEDBACK_KEY');
 (function getDataStorage() {
     const saveData = JSON.parse(localStorage.getItem('FEEDBACK_KEY'));
 
-    const emailInput = document.querySelector('.feedback-form input');
+    const email = document.querySelector('.feedback-form input');
 
-    const messageInput = document.querySelector('.feedback-form textarea');
+    const message = document.querySelector('.feedback-form textarea');
 
     if (saveData) {
-        emailInput.value = saveData.email;
-        messageInput.value = saveData.message;
+        email.value = saveData.email;
+        message.value = saveData.message;
     }
 })();
 
