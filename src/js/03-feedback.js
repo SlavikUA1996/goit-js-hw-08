@@ -7,10 +7,14 @@ form.addEventListener('input', throttle(onFormInput, 500));
 form.addEventListener('submit', formSubmit);
 
 const FEEDBACK_KEY = 'feedback-form-state';
-const formData = {};
+// const formData = {};
 
 function onFormInput(e) {
-    formData[e.target.name] = e.target.value;
+    // formData[e.target.name] = e.target.value;
+    const formData = {
+        email: form.elements.email.value,
+        message:form.elements.message.value,
+    }
 localStorage.setItem('FEEDBACK_KEY', JSON.stringify(formData))
 }
 
